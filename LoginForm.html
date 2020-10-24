@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Form</title>
+        <style>
+            div{
+                text-align: center;
+            }
+        </style>
+        <script>
+            let arr = [0,1,2,3,4]
+            let validate=() =>{
+                    var x=document.getElementById("name").value;
+                    document.getElementById("userName").innerHTML = x;
+
+                    var y=document.getElementById("date").value;
+                    document.getElementById("userDate").innerHTML = y;
+                    
+                    var z=document.getElementById("gym").value;
+                    //var z1=document.getElementById("f").value;
+                    if(z == arr[0] ){
+                        document.getElementById("userFacility").innerHTML = "Gym";
+                    }
+                    else{
+                        document.getElementById("userFacility").innerHTML = "Pool";
+                    }
+                    // var z1=document.getElementById("pool").value;
+                    // if()
+                    // {
+                    // document.getElementById("userFacility1").innerHTML = z1;
+                    // }
+                    
+
+                    var p = document.getElementById("place").value;
+                    if(p == arr[0]){
+                        document.getElementById("userPlace").innerHTML = "India";
+                    }
+                    else if(p == arr[1]){
+                        document.getElementById("userPlace").innerHTML = "USA";
+                    }
+                    else if(p == arr[2]){
+                        document.getElementById("userPlace").innerHTML = "Europe";
+                    }
+                    else if(p == arr[3]){
+                        document.getElementById("userPlace").innerHTML = "Australia";
+                    }
+                    else if(p == arr[4]){
+                        document.getElementById("userPlace").innerHTML = "Africa";
+                    }
+
+
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <form>
+                <input type="text" placeholder="Enter the Name" id="name"><br><br>
+                <input type="text" placeholder="Enter the Date" id="date"><br><br>
+                Facility <br>
+                <div id="fac">
+                    <input type="radio" name="gym" value="0" id="gym">Gym<input type="radio" name="pool" value="1" id="pool">Pool<br><br>
+                </div>
+                
+                <select id="place">
+                    <option value="0">India</option>
+                    <option value="1">USA</option>
+                    <option value="2">Europe</option>
+                    <option value="3">Australia</option>
+                    <option value="4">Africa</option>
+                </select>
+                <br><br>
+                
+            </form>
+            <input type="submit" onclick="validate()"> 
+        </div>
+        <div >
+            <p id=userName></p> 
+            <p id=userDate></p> 
+            <p id=userFacility></p>
+            <p id=userFacility1></p> 
+            <p id=userPlace></p> 
+        </div>
+        
+    </body>
+</html>
+
