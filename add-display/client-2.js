@@ -5,5 +5,5 @@ app.get("/", (req, res) => {
 })
 
 app.listen(3333, () => {
-    console.log("Client App at 3333");
+    console.log("client side App at 3333");
 })
